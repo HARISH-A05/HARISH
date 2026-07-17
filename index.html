@@ -94,15 +94,24 @@
   .hero-bg {
     position: absolute; inset: 0; z-index: 0;
     background:
-      radial-gradient(ellipse 60% 60% at 80% 20%, rgba(255,107,53,0.15) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(78,205,196,0.12) 0%, transparent 60%),
-      radial-gradient(ellipse 40% 40% at 60% 60%, rgba(168,85,247,0.08) 0%, transparent 60%);
+      radial-gradient(ellipse 55% 55% at 85% 15%, rgba(255,107,53,0.38) 0%, transparent 60%),
+      radial-gradient(ellipse 45% 55% at 10% 15%, rgba(255,230,109,0.28) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 15% 85%, rgba(78,205,196,0.32) 0%, transparent 60%),
+      radial-gradient(ellipse 45% 45% at 65% 70%, rgba(168,85,247,0.3) 0%, transparent 60%),
+      radial-gradient(ellipse 35% 45% at 50% 40%, rgba(247,197,159,0.18) 0%, transparent 65%);
+    background-size: 180% 180%;
+    animation: heroGlow 18s ease-in-out infinite;
+  }
+  @keyframes heroGlow {
+    0%   { background-position: 0% 0%; }
+    50%  { background-position: 100% 40%; }
+    100% { background-position: 0% 0%; }
   }
   .hero-grid {
     position: absolute; inset: 0; z-index: 0;
     background-image: linear-gradient(var(--border) 1px, transparent 1px),
                       linear-gradient(90deg, var(--border) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background-size: 46px 46px;
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
   }
   .hero-content { position: relative; z-index: 1; max-width: 860px; width: 100%; }
@@ -188,7 +197,6 @@
     animation: fadeLeft 1s 0.5s ease both;
   }
   .hero-photo-hero { display: none; }
-  .hero-photo-wrap { display: none; }
   .hero-name-row { display: none; }
   .hero-name {
     font-family: 'Syne', sans-serif;
@@ -227,35 +235,6 @@
     z-index: 1;
   }
   .hero-photo-ring-side {
-    position: absolute; inset: -6px;
-    border-radius: 50%;
-    background: conic-gradient(var(--c1), var(--c4), var(--c3), var(--c5), var(--c1));
-    z-index: 0;
-    animation: spinRing 4s linear infinite;
-    mask: radial-gradient(farthest-side, transparent calc(100% - 3px), black calc(100% - 3px));
-    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), black calc(100% - 3px));
-  }
-    position: relative;
-    width: 140px; height: 140px;
-    margin-bottom: 2rem;
-    display: inline-block;
-  }
-  .hero-photo-wrap {
-    position: relative;
-    width: 200px; height: 200px;
-    margin: 0 auto 1rem;
-  }
-  .hero-photo {
-    width: 140px; height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: top center;
-    border: 3px solid rgba(255,107,53,0.5);
-    display: block;
-    position: relative;
-    z-index: 1;
-  }
-  .hero-photo-ring {
     position: absolute; inset: -6px;
     border-radius: 50%;
     background: conic-gradient(var(--c1), var(--c4), var(--c3), var(--c5), var(--c1));
@@ -868,7 +847,7 @@
       <div class="edu-year">2022 – 2026</div>
       <div class="edu-degree">B.E. Electronics & Communication Engineering</div>
       <div class="edu-inst">Bannari Amman Institute of Technology</div>
-      <span class="edu-grade">CGPA: 7.82 (up to 7th Sem)</span>
+      <span class="edu-grade">CGPA: 7.87</span>
     </div>
     <div class="edu-item reveal">
       <div class="edu-year">HSC — 2022</div>
